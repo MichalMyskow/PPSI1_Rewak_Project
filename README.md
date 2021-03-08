@@ -13,3 +13,10 @@ Celem projektu jest stworzenie szkieletu prostej stronki blogowej, której treś
 * Slajder-hiperłącze (zmienia zdjęcia, które są hiperłaczami)
 * Slajder tła
 * (wymyślić - myśleć chłopaki)
+
+## Wybrane technologie:
+### FrontEnd
+* REACT - JavaScript
+* Bootstrap - CSS
+### BackEnd
+* Symphony - PHP
