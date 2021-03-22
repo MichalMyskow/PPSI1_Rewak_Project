@@ -1,7 +1,7 @@
 # PPSI1_Rewak_Project
 
-> This project is a university task
-> Strona NIE wspiera Internet Explorer'a
+> This project is a university task;
+> Strona NIE wspiera Internet Explorer'a;
 
 [Dla ułatwienia plik README.md będzie napisany po polsku]
 
@@ -13,11 +13,11 @@ Celem projektu jest stworzenie szkieletu prostej stronki blogowej, której treś
 
 * Slajder-hiperłącze (zmienia zdjęcia, które są hiperłaczami)
 * Slajder tła
-* (wymyślić - myśleć chłopaki)
+*
 
 ## Wybrane technologie:
 ### FrontEnd
-* REACT - JavaScript
+* REACT.js - JavaScript
 * Bootstrap - CSS
 ### BackEnd
 * Symphony - PHP
