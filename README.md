@@ -11,13 +11,13 @@ Celem projektu jest stworzenie szkieletu prostej stronki blogowej, której treś
 
 ## Funkcje strony
 
-* Slajder-hiperłącze (zmienia zdjęcia, które są hiperłaczami)
+* Slajder-hiperłącze
 * Slajder tła
-*
+* Przechodzenie między stronami
 
 ## Wybrane technologie:
 ### FrontEnd
-* REACT.js - JavaScript
-* Bootstrap - CSS
+* REACT.js (react-icons, react-router-dom, styled-components)- JavaScript
+* Bootstrap - nieobecny,
 ### BackEnd
 * Symphony - PHP

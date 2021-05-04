@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import GlobalStyles from './globalStyles';
+import Navbar from './components/Navbar/Navbar';
+import Slider from './components/Slider/Slider';
+import {SliderData} from './components/Slider/SliderData';
+import Article from './components/ArticleTemplate/ArticleTemplate';
+import Footer from './components/Footer/Footer';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Kliknij a przejdziesz na stronę react.com
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyles />
+      <Navbar />
+      <Slider slides = {SliderData} />
+      <Article />
+      <Footer />
+    </Router>
   );
 }
 
