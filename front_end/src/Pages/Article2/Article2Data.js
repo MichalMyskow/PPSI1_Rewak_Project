@@ -1,0 +1,7 @@
+export const Article2Data = {
+    title: 'Andrzej Pilipiuk - Kroniki Jakuba Wędrowycza',
+    paragraph1: 'Polscy autorzy raczej unikają tematyki polskiej a nawet scenografii kraju ojczystego. Jeśli już postanowią napisać utwór fantastyczny którego akcja rozgrywa się w Polsce, to po pierwszej próbie z ulgą odskakują od niewygodnego tematu. Po Weselu w Atomicach Mrożka niełatwo jest ulokować się na serio a i na wesoło w Tu i Teraz. Andrzej Pilipiuk jest chlubnym wyjątkiem który nie przestraszył się starcia ze skrzeczącą rzeczywistością. Stworzył postać filozofa chwilami oscylującego w stronę menela, dziwaka i geniusza rycerza i dowcipnisia Polaka-Który-Potrafi, i Polaka któremu się chce.',
+    paragraph2: 'Do tego szlachetnego altruisty, który za trudy dla świata chce tylko dobrego słowa. I dobrego trunku. Masz problemy z duchami przodków? Coś stuka w Twoim domu? Sąsiad jest wampirem? Udaj się do Jakuba Wędrowycza najlepszego Cywilnego Egzorcysty w Kraju! Być może mieszka na zapadłej wsi na Ścianie Wschodniej być może odżywia się własnoręcznie pędzonymi trunkami i wygląda na starego kłusownika ale nie daj się zwieść pozorom! Jeszcze nie pojawił się wampir, kosmita, wilkołak czy upiór, który dałby radę nieustraszonemu egzorcyście w gumofilcach.',
+    image: require('./jakub_Wedrowycz.jpg').default,
+    alt: 'Image'
+};

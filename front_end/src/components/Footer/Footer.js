@@ -1,5 +1,5 @@
 import React from 'react';
-import { SocialMedia, ProjectLogo, SocialIcons, FooterContainer, SocialWrapper, SocialIconLink, ProjectLogoLink, ProjectLogoIcon } from './Footer.elements';
+import { SocialMedia, SocialIcons, FooterContainer, SocialWrapper, SocialIconLink, ProjectLogoLink, ProjectLogoIcon } from './Footer.elements';
 import { FaFacebook, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {

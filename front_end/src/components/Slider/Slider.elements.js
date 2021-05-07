@@ -1,11 +1,8 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import { BsArrowBarRight, BsArrowRightShort, BsArrowRight } from 'react-icons/bs';
-import { IoMdArrowRoundForward } from 'react-icons/io';
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import { BsArrowRightShort } from 'react-icons/bs';
 
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
-import { BiRightArrow, BiLeftArrow } from 'react-icons/bi';
 
 export const SliderSection = styled.section`
     height: 100vh;

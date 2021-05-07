@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import {
     SliderSection,
     SliderWrapper,
@@ -12,7 +12,6 @@ import {
     PrevArrow,
     NextArrow
 } from './Slider.elements';
-import { Button } from '../../globalStyles';
 
 const Slider = ({ slides }) => {
     const [current, setCurrent] = useState(0);
