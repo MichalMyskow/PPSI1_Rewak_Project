@@ -4,7 +4,8 @@ import Navbar from './components/Navbar/Navbar';
 import Slider from './components/Slider/Slider';
 import { SliderData } from './components/Slider/SliderData';
 
-import ArtInfo from './components/ArtInfo/ArtInfo';
+// import ArtInfo from './components/ArtInfo/ArtInfo';
+import Articles from './Pages/Articles/Articles';
 
 import Article1 from './Pages/Article1/Article1';
 import Article2 from './Pages/Article2/Article2';
@@ -18,8 +19,9 @@ function App() {
       <GlobalStyles />
       <Navbar />
       <Slider slides={SliderData} />
-      <ArtInfo />
       <Switch>
+        <Route path='/articles' exact component={Articles} />
+
         <Route path='/article1' exact component={Article1} />
         <Route path='/article2' exact component={Article2} />
         <Route path='/article3' exact component={Article3} />
