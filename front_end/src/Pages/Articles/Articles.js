@@ -5,11 +5,11 @@ const Articles = () => {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-        const url = 'http://blogapi.test/api/posts?page=1&published=true';
+        const url = 'http://blogapi.local/api/posts?page=1&published=true';
         fetch(url, {
             method: 'GET',
             headers: {'Content-Type': 'application/json',
-                    Authorization: 'BEARER '+ localStorage.getItem('JWT'),
+                //'Authorization': 'BEARER '+ localStorage.getItem('JWT'),
                 'Accept': 'application/json'},
             credentials: 'include'
         }).then(resp => resp.json())

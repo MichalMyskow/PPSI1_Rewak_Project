@@ -49,7 +49,7 @@ const Navbar = ({ showModal, setShowModal, openModal }) => {
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to='/abour-us'>
+                        <NavLink to='/about-us'>
                             About Us
                         </NavLink>
                     </NavItem>

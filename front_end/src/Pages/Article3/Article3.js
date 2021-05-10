@@ -7,7 +7,7 @@ const Article3 = () => {
     const [post, setPost] = useState("");
 
     useEffect(() => {
-        const url1 = 'http://blogapi.test/api/posts/3';
+        const url1 = 'http://blogapi.local/api/posts/3';
         fetch(url1).then(resp => resp.json())
             .then(resp => setPost(resp))
     }, []);
