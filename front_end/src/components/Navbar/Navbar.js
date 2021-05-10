@@ -14,10 +14,18 @@ import {
     NavItemBtn,
     NavBtnLink
 } from './Navbar.elements';
+import Modal from '../Modal/Modal';
 
-const Navbar = () => {
+
+const Navbar = ({ showModal, setShowModal, openModal }) => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
+
+    // const [showModal, setShowModal] = useState(false);
+
+    // const openModal = () => {
+    //     setShowModal(!showModal);
+    // }
 
     return (
         <Nav>
@@ -46,10 +54,11 @@ const Navbar = () => {
                         </NavLink>
                     </NavItem>
                     <NavItemBtn>
-                        <NavBtnLink to="/join">
-                            <Button>
-                                Join Us
+                        <NavBtnLink /*to="/button"*/>
+                            <Button onClick={openModal}>
+                                Sing In/Up
                             </Button>
+                            {/* <Modal showModal={showModal} setShowModal={setShowModal} /> */}
                         </NavBtnLink>
                     </NavItemBtn>
                 </NavMenu>

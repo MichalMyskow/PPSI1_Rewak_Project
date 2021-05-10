@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GlobalStyles from './globalStyles';
 import Navbar from './components/Navbar/Navbar';
+import Modal from './components/Modal/Modal';
 import Slider from './components/Slider/Slider';
 import { SliderData } from './components/Slider/SliderData';
 
@@ -14,10 +15,21 @@ import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(!showModal);
+  }
+
   return (
     <Router>
       <GlobalStyles />
-      <Navbar />
+
+      <Navbar openModal={openModal} />
+
+      <Modal showModal={showModal} setShowModal={setShowModal} />
+
       <Slider slides={SliderData} />
       <Switch>
         <Route path='/articles' exact component={Articles} />

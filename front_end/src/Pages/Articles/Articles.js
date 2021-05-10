@@ -8,7 +8,7 @@ const Articles = () => {
         const url = 'http://blogapi.test/api/posts?page=1&published=true';
         fetch(url, {
             method: 'GET',
-            header: {'Content-Type': 'application/json',
+            headers: {'Content-Type': 'application/json',
                     Authorization: 'BEARER '+ localStorage.getItem('JWT'),
                 'Accept': 'application/json'},
             credentials: 'include'
@@ -23,7 +23,7 @@ const Articles = () => {
     return (
         <div>
             {
-                articles.map(article => (
+                articles.map(articles => (
                     <ArtInfo title={articles.title} content={articles.content} />
                 ))
             }
