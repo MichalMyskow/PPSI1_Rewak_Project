@@ -9,9 +9,6 @@ const Modal = ({ showModal, setShowModal }) => {
 
     const [redirect, setRedirect] = useState('');
 
-    // const [emailError, setEmailError] = useState('');
-    // const [passwordError, setPasswordError] = useState('');
-
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
@@ -33,51 +30,51 @@ const Modal = ({ showModal, setShowModal }) => {
     //sign up - ang. zapisz się
     const handleSingUp = () => {
 
-        e.preventDefault();
+        // e.preventDefault();
 
-        const response = await fetch('http://blogapi.local/api/login_check', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            credentials: 'include',
-            body: JSON.stringify({
-                username,
-                password,
-                email,
-                firstname
-            })
-        });
+        // const response = await fetch('http://blogapi.local/api/login_check', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     credentials: 'include',
+        //     body: JSON.stringify({
+        //         username,
+        //         password,
+        //         email,
+        //         firstname
+        //     })
+        // });
 
-        const content = await response.json();
-        localStorage.setItem("JWT", content.token);
-        console.log(response);
+        // const content = await response.json();
+        // localStorage.setItem("JWT", content.token);
+        // console.log(response);
 
-        localStorage.removeItem("name of the item");
+        // localStorage.removeItem("name of the item");
 
-        setRedirect(true);
+        // setRedirect(true);
     };
 
     //sign in - ang. zaloguj się
     const handleSingIn = () => {
 
-        e.preventDefault();
+        // e.preventDefault();
 
-        const response = await fetch('http://blogapi.local/api/users?page=1', {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
-            credentials: 'include',
-            body: JSON.stringify({
-                username,
-                password
-            })
-        });
+        // const response = await fetch('http://blogapi.local/api/users?page=1', {
+        //     method: 'GET',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     credentials: 'include',
+        //     body: JSON.stringify({
+        //         username,
+        //         password
+        //     })
+        // });
 
-        const content = await response.json();
-        localStorage.setItem("JWT", content.token);
-        console.log(response);
+        // const content = await response.json();
+        // localStorage.setItem("JWT", content.token);
+        // console.log(response);
 
-        localStorage.removeItem("name of the item");
+        // localStorage.removeItem("name of the item");
 
-        setRedirect(true);
+        // setRedirect(true);
     }
 
     // po prostu wywal

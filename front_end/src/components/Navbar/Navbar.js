@@ -53,6 +53,11 @@ const Navbar = ({ showModal, setShowModal, openModal }) => {
                             About Us
                         </NavLink>
                     </NavItem>
+                    <NavItem>
+                    <NavLink to='/admin'>
+                            Admin
+                        </NavLink>
+                    </NavItem>
                     <NavItemBtn>
                         <NavBtnLink /*to="/button"*/>
                             <Button onClick={openModal}>
