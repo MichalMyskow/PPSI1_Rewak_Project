@@ -28,8 +28,8 @@ const AdminTemplate = () => {
             },
             credentials: 'include'
         }).then(resp => resp.json())
-            .then(resp => setPosts(resp))
-        // .then(resp => console.log(resp))
+            // .then(resp => setPosts(resp))
+        .then(resp => console.log(resp))
     }, []);
 
     useEffect(() => {
