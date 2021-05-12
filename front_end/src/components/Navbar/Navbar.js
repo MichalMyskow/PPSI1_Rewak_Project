@@ -14,7 +14,7 @@ import {
     NavItemBtn,
     NavBtnLink
 } from './Navbar.elements';
-import Modal from '../Modal/Modal';
+// import Modal from '../Modal/Modal';
 
 
 const Navbar = ({ showModal, setShowModal, openModal }) => {
