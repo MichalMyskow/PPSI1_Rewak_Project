@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button } from '../../globalStyles';
-import { InfoSec, Container, InfoRow, InfoColumn, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper, Img } from './ArtInfo.elements';
+import { InfoSec, Container, InfoRow, InfoColumn, TextWrapper, Heading, Subtitle, ImgWrapper, Img } from './ArtInfo.elements';
 
 const ArtInfo = ({title, content, photoLink}) => {
     return (
@@ -10,7 +10,6 @@ const ArtInfo = ({title, content, photoLink}) => {
                     <InfoRow>
                         <InfoColumn>
                             <TextWrapper>
-                                <TopLine >TopLine</TopLine>
                                 <Heading >{title}</Heading>
                                 <Subtitle>{content}</Subtitle>
                                 <Link to='/'>
@@ -22,7 +21,6 @@ const ArtInfo = ({title, content, photoLink}) => {
                         </InfoColumn>
                         <InfoColumn>
                             <ImgWrapper>
-                                {/*<Img src={require('./probne.jpg').default} alt='Project' />*/}
                                 <Img src={photoLink} alt='Project_photo' />
                             </ImgWrapper>
                         </InfoColumn>

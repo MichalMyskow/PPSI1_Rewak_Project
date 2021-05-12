@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import ArticleTemplate from '../../components/ArticleTemplate/ArticleTemplate';
-// import { Article2Data } from './Article2Data';
+// import { Article3Data } from './Article3Data';
 
-const Article2 = () => {
+const Article3 = () => {
 
     const [post, setPost] = useState("");
 
     useEffect(() => {
-        const url1 = 'http://blogapi.local/api/posts/2';
+        const url1 = 'http://blogapi.local/api/posts/4';
         fetch(url1).then(resp => resp.json())
-        .then(resp => setPost(resp))
-      }, []);
+            .then(resp => setPost(resp))
+    }, []);
 
     const title = `${post.title}`
     const content = `${post.content}`
@@ -18,9 +18,11 @@ const Article2 = () => {
 
     return (
         <div>
-            <ArticleTemplate  title={title} content={content}   photoLink={photoLink}/>
+            <ArticleTemplate title={title} content={content}   photoLink={photoLink}/>
         </div>
     );
 }
 
-export default Article2;
+
+
+export default Article3;

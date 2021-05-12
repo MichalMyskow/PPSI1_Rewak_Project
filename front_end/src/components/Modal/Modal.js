@@ -1,16 +1,9 @@
-import React, { useRef, useEffect, useCallback, useState, SyntheticEvent } from 'react';
-import axios from 'axios';
-import { Redirect } from "react-router-dom";
-import { Background, ModalWrappper, CloseModalButton, Login, LoginContainer, BtnContainer, ButtonForLogin } from './Modal.elements';
+import React, { useRef, useEffect, useCallback, useState} from 'react';
+import { Background, ModalWrappper, CloseModalButton, Login, LoginContainer, BtnContainer } from './Modal.elements';
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal, currentlyLoggedUser, setCurrentlyLoggedUser }) => {
     const modalRef = useRef();
     const [hasAccount, setHasAccount] = useState(false);
-
-    const [redirect, setRedirect] = useState('');
-
-    // const [emailError, setEmailError] = useState('');
-    // const [passwordError, setPasswordError] = useState('');
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -33,6 +26,7 @@ const Modal = ({ showModal, setShowModal }) => {
     //sign up - ang. zapisz się
     const handleSingUp = async () => {
 
+
         await fetch('http://blogapi.local/api/users', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -45,6 +39,7 @@ const Modal = ({ showModal, setShowModal }) => {
         });
         setHasAccount(true);
     };
+
 
     //sign in - ang. zaloguj się
     const handleSingIn = async () => {
