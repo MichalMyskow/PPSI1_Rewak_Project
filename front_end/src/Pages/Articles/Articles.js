@@ -5,8 +5,8 @@ const Articles = () => {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-        // const url = 'http://blogapi.local/api/posts?&published=true';
         const url = 'http://blogapi.local/api/posts?published=true';
+
         fetch(url, {
             method: 'GET',
             headers: {
@@ -17,7 +17,7 @@ const Articles = () => {
             credentials: 'include'
         }).then(resp => resp.json())
             .then(resp => setArticles(resp))
-        // .then(resp => console.log(resp))
+            .then(resp => console.log(resp))
     }, []);
 
     return (

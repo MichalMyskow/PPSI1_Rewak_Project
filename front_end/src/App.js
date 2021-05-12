@@ -20,6 +20,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
 
   const [showModal, setShowModal] = useState(false);
+  const [currentlyLoggedUser, setCurrentlyLoggedUser] = useState('');
 
   const openModal = () => {
     setShowModal(!showModal);
@@ -31,7 +32,7 @@ function App() {
 
       <Navbar openModal={openModal} />
 
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <Modal showModal={showModal} setShowModal={setShowModal} currentlyLoggedUser={currentlyLoggedUser} setCurrentlyLoggedUser={setCurrentlyLoggedUser}/>
 
       {/* <Slider slides={SliderData} /> */}
       <Switch>

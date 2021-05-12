@@ -1,16 +1,14 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { Background, ModalWrappper, CloseModalButton, Login, LoginContainer, BtnContainer } from './Modal.elements';
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal, currentlyLoggedUser, setCurrentlyLoggedUser }) => {
     const modalRef = useRef();
     const [hasAccount, setHasAccount] = useState(false);
-
-    const [redirect, setRedirect] = useState('');
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
-    const [firstname, setFirstname] = useState('');
+    const [firstName, setFirstname] = useState('');
 
     const cleanInputs = () => {
         setUsername('');
@@ -26,108 +24,40 @@ const Modal = ({ showModal, setShowModal }) => {
     };
 
     //sign up - ang. zapisz się
-    const handleSingUp = () => {
+    const handleSingUp = async () => {
 
-        // e.preventDefault();
 
-        // const response = await fetch('http://blogapi.local/api/login_check', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     credentials: 'include',
-        //     body: JSON.stringify({
-        //         username,
-        //         password,
-        //         email,
-        //         firstname
-        //     })
-        // });
-
-        // const content = await response.json();
-        // localStorage.setItem("JWT", content.token);
-        // console.log(response);
-
-        // localStorage.removeItem("name of the item");
-
-        // setRedirect(true);
+        await fetch('http://blogapi.local/api/users', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                firstName,
+                email,
+                username,
+                password
+            })
+        });
+        setHasAccount(true);
     };
 
+
     //sign in - ang. zaloguj się
-    const handleSingIn = () => {
+    const handleSingIn = async () => {
 
-        // e.preventDefault();
-
-        // const response = await fetch('http://blogapi.local/api/users?page=1', {
-        //     method: 'GET',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     credentials: 'include',
-        //     body: JSON.stringify({
-        //         username,
-        //         password
-        //     })
-        // });
-
-        // const content = await response.json();
-        // localStorage.setItem("JWT", content.token);
-        // console.log(response);
-
-        // localStorage.removeItem("name of the item");
-
-        // setRedirect(true);
-    }
-
-    // po prostu wywal
-    // useEffect(() => {
-    //     (
-    //         async () => {
-    //             const response = await fetch('http://blogapi.local/api/users/15',{
-    //                 method: 'GET',
-    //                 headers: {'Content-Type': 'application/json', 'Authorization': 'BEARER '+ localStorage.getItem('JWT') },
-    //                 credentials: 'include',
-    //             });
-    //             const content = await response.json();
-    //             setUsername(content.username);
-    //         }
-    //     )();
-    // });
-
-    //moje eksperymentalne, usuń jak zobaczysz
-    //sign up - ang. zapisz się
-    // const handleSingUp = () => {
-    //
-    //     console.log("Sign Up done" + username + password);
-    //     axios({
-    //         method: 'post',
-    //         url: 'http://blogapi.local/api/users',
-    //         headers: { 'Content-Type': 'application/json' },
-    //         credentials: 'include',
-    //         data: {
-    //             username: username,
-    //             password: password,
-    //             email: email,
-    //             firstName: firstname
-    //         }
-    //     })
-
-    // }
-
-    //moje eksperymentalne, usuń jak zobaczysz
-    //sign in - ang. zaloguj się
-    // const handleSingIn = () => {
-    //
-    //     console.log("Sign In done" + username + email + username + password);
-
-    //     axios({
-    //         method: 'post',
-    //         // url: 'http://blogapi.local/api/users',
-    //         url: 'API/login_check',
-    //         responesType: 'stream'
-    //     }).then(resp => resp.json())
-    //         .then(resp => console.log)
-    //         .then(resp => resp.json())
-    //         // .then(resp => setArticles(resp))
-    //         .then(resp => console.log(resp))
-    // }
-
+            const response = await fetch('http://blogapi.local/api/login_check', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                credentials: 'include',
+                body: JSON.stringify({
+                    username,
+                    password
+                })
+            });
+            const content = await response.json();
+            localStorage.setItem("JWT", content.token);
+            //localStorage.removeItem("name of the item")
+            setShowModal(false);
+        }
 
     const keyPress = useCallback(e => {
         if (e.key === 'Escape' && showModal) {
@@ -173,7 +103,7 @@ const Modal = ({ showModal, setShowModal }) => {
                                                 type='text'
                                                 autoFocus
                                                 required
-                                                value={firstname}
+                                                value={firstName}
                                                 onChange={(e) => setFirstname(e.target.value)}
                                             />
                                             <label>Email</label>
