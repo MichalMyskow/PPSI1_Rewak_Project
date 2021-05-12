@@ -13,6 +13,7 @@ import Article1 from './Pages/Article1/Article1';
 import Article2 from './Pages/Article2/Article2';
 import Article3 from './Pages/Article3/Article3';
 import Article4 from './Pages/Article4/Article4';
+import AdminPage from './Pages/AdminPage/AdminPage';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -41,6 +42,8 @@ function App() {
         <Route path='/article2' exact component={Article2} />
         <Route path='/article3' exact component={Article3} />
         <Route path='/article4' exact component={Article4} />
+
+        <Route path='/admin' exact component={AdminPage} />
       </Switch>
       <Footer />
     </Router>

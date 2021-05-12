@@ -1,7 +1,5 @@
-import React, { useRef, useEffect, useCallback, useState, SyntheticEvent } from 'react';
-import axios from 'axios';
-import { Redirect } from "react-router-dom";
-import { Background, ModalWrappper, CloseModalButton, Login, LoginContainer, BtnContainer, ButtonForLogin } from './Modal.elements';
+import React, { useRef, useEffect, useCallback, useState } from 'react';
+import { Background, ModalWrappper, CloseModalButton, Login, LoginContainer, BtnContainer } from './Modal.elements';
 
 const Modal = ({ showModal, setShowModal }) => {
     const modalRef = useRef();

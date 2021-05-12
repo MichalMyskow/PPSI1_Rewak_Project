@@ -5,7 +5,8 @@ const Articles = () => {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-        const url = 'http://blogapi.local/api/posts?&published=true';
+        // const url = 'http://blogapi.local/api/posts?&published=true';
+        const url = 'http://blogapi.local/api/posts?published=true';
         fetch(url, {
             method: 'GET',
             headers: {
@@ -18,10 +19,6 @@ const Articles = () => {
             .then(resp => setArticles(resp))
         // .then(resp => console.log(resp))
     }, []);
-
-    const title = `${articles.title}`;
-    const content = `${articles.content}`;
-    const photoLink = `${articles.photoLink}`;
 
     return (
         <div>
