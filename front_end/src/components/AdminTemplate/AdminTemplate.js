@@ -17,13 +17,13 @@ const AdminTemplate = () => {
     };
 
     useEffect(() => {
-        const url = 'http://blogapi.local/api/posts?page=1';
+        const url1 = 'http://blogapi.local/api/posts?page=1';
 
-        fetch(url, {
+        fetch(url1, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                //'Authorization': 'BEARER '+ localStorage.getItem('JWT'),
+                // 'Authorization': 'BEARER '+ localStorage.getItem('JWT'),
                 'Accept': 'application/json'
             },
             credentials: 'include'
@@ -33,13 +33,13 @@ const AdminTemplate = () => {
     }, []);
 
     useEffect(() => {
-        const url = 'http://blogapi.local/api/users?page=1';
+        const url2 = 'http://blogapi.local/api/users?page=1';
 
-        fetch(url, {
+        fetch(url2, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                //'Authorization': 'BEARER '+ localStorage.getItem('JWT'),
+                'Authorization': 'BEARER '+ localStorage.getItem('JWT'),
                 'Accept': 'application/json'
             },
             credentials: 'include'
@@ -68,9 +68,9 @@ const AdminTemplate = () => {
                     </Content>
                     <Content active={active === 1}>
 
-                        {/* {users.map(user => (
-                            <OneRow title={user.title} subtitle={user.subtitle} />
-                        ))} */}
+                        {users.map(user => (
+                            <OneRow title={user.id} subtitle={user.username} />
+                        ))}
 
                     </Content>
                 </ContentWrapper>

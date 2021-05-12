@@ -10,12 +10,12 @@ const Modal = ({ showModal, setShowModal, currentlyLoggedUser, setCurrentlyLogge
     const [email, setEmail] = useState('');
     const [firstName, setFirstname] = useState('');
 
-    const cleanInputs = () => {
-        setUsername('');
-        setPassword('');
-        setEmail('');
-        setFirstname('');
-    };
+    // const cleanInputs = () => {
+    //     setUsername('');
+    //     setPassword('');
+    //     setEmail('');
+    //     setFirstname('');
+    // };
 
     const closeModal = e => {
         if (modalRef.current === e.target) {
@@ -56,7 +56,9 @@ const Modal = ({ showModal, setShowModal, currentlyLoggedUser, setCurrentlyLogge
             const content = await response.json();
             localStorage.setItem("JWT", content.token);
             //localStorage.removeItem("name of the item")
-            setShowModal(false);
+            if(localStorage.getItem("JWT")!=='undefined') {
+                setShowModal(false);
+            }
         }
 
     const keyPress = useCallback(e => {

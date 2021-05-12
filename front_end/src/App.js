@@ -3,10 +3,7 @@ import GlobalStyles from './globalStyles';
 import Navbar from './components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
 import Modal from './components/Modal/Modal';
-import Slider from './components/Slider/Slider';
-import { SliderData } from './components/Slider/SliderData';
 
-// import ArtInfo from './components/ArtInfo/ArtInfo';
 import Articles from './Pages/Articles/Articles';
 
 import Article1 from './Pages/Article1/Article1';
