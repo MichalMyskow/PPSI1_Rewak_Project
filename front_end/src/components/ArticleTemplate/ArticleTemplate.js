@@ -1,7 +1,7 @@
 import React from 'react';
 import { Section, Container, ColumnLeft, ColumnRight } from './ArticleTemplate.elements';
 
-const ArticleTemplate = ({title, content, img}) => {
+const ArticleTemplate = ({title, content, photoLink}) => {
 
     return (
         <Section>
@@ -11,7 +11,7 @@ const ArticleTemplate = ({title, content, img}) => {
                     <p>{content}</p>
                 </ColumnLeft>
                 <ColumnRight>
-                    <img src={img} alt='SomePhoto' />
+                    <img src={photoLink} alt='SomePhoto' />
                 </ColumnRight>
             </Container>
         </Section>

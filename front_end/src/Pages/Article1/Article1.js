@@ -15,10 +15,10 @@ const Article1 = () => {
 
     const title = `${post.title}`
     const content = `${post.content}`
-    // const photo_link = `${post.photo_link}`
+    const photoLink = `${post.photoLink}`
     return (
         <div>
-            <ArticleTemplate title={title} content={content}  />
+            <ArticleTemplate title={title} content={content}  photoLink={photoLink}/>
         </div>
     );
 }

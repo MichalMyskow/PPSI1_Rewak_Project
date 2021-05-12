@@ -13,18 +13,19 @@ const Articles = () => {
                 'Accept': 'application/json'},
             credentials: 'include'
         }).then(resp => resp.json())
-            // .then(resp => setArticles(resp))
-            .then(resp => console.log(resp))
+            .then(resp => setArticles(resp))
+            //.then(resp => console.log(resp))
     }, []);
 
-    // const title = `${articles.title}`;
-    // const content = `${articles.content}`;
+    const title = `${articles.title}`;
+    const content = `${articles.content}`;
+    const photoLink = `${articles.photoLink}`
 
     return (
         <div>
             {
                 articles.map(articles => (
-                    <ArtInfo title={articles.title} content={articles.content} />
+                    <ArtInfo title={articles.title} content={articles.content} photoLink={articles.photoLink}/>
                 ))
             }
         </div>

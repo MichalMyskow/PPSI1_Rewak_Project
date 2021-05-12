@@ -64,7 +64,7 @@ class Post
      *
      * @Groups({"read", "write"})
      *
-     * @ORM\Column(name="content", type="text", length=255, nullable=false)
+     * @ORM\Column(name="content", type="text", length=65535, nullable=false)
      * @Assert\NotBlank()
      */
     private $content;
@@ -147,6 +147,16 @@ class Post
      * @Assert\NotBlank()
      */
     private $photoLink;
+
+    /**
+     * @var string
+     *
+     * @Groups({"read", "write"})
+     *
+     * @ORM\Column(name="subtitle", type="string", length=255, nullable=false)
+     * @Assert\NotBlank()
+     */
+    private $subtitle;
 
     public function __construct()
     {
@@ -345,6 +355,18 @@ class Post
     public function setPhotoLink(string $photoLink): self
     {
         $this->photoLink = $photoLink;
+
+        return $this;
+    }
+
+    public function getSubtitle(): ?string
+    {
+        return $this->subtitle;
+    }
+
+    public function setSubtitle(string $subtitle): self
+    {
+        $this->subtitle = $subtitle;
 
         return $this;
     }
