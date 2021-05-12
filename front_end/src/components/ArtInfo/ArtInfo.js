@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../../globalStyles';
 import { InfoSec, Container, InfoRow, InfoColumn, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper, Img } from './ArtInfo.elements';
 
-const ArtInfo = ({title, content}) => {
+const ArtInfo = ({title, content, photoLink}) => {
     return (
         <>
             <InfoSec>
@@ -22,8 +22,8 @@ const ArtInfo = ({title, content}) => {
                         </InfoColumn>
                         <InfoColumn>
                             <ImgWrapper>
-                                <Img src={require('./probne.jpg').default} alt='Project' />
-                                {/* <Img src={image} alt='Project_photo' /> */}
+                                {/*<Img src={require('./probne.jpg').default} alt='Project' />*/}
+                                <Img src={photoLink} alt='Project_photo' />
                             </ImgWrapper>
                         </InfoColumn>
                     </InfoRow>
