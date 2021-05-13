@@ -71,17 +71,18 @@ export const SliderContent = styled.div`
     color: #fff;
 
     h1{
-        font-size: clamp(1rem, 8vw, 2rem);
+        font-size: clamp(2rem, 2.5rem, 2.7rem);
         font-weight: 400;
         text-transform: uppercase;
-        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0, 0.4);
+        text-shadow: 3px 3px 5px #000;
         text-align: left;
         margin-bottom: 0.8rem;
     }
 
     p{
-        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0, 0.4);
+        text-shadow: 3px 3px 5px #000;
         margin-bottom: 1.2rem;
+        font-size: 1.4rem;
     }
 `;
 

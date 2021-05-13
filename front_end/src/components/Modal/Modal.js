@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { Background, ModalWrappper, CloseModalButton, Login, LoginContainer, BtnContainer } from './Modal.elements';
 
-const Modal = ({ showModal, setShowModal, currentlyLoggedUser, setCurrentlyLoggedUser }) => {
+const Modal = ({ showModal, setShowModal }) => {
     const modalRef = useRef();
     const [hasAccount, setHasAccount] = useState(false);
 
@@ -9,13 +9,6 @@ const Modal = ({ showModal, setShowModal, currentlyLoggedUser, setCurrentlyLogge
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [firstName, setFirstname] = useState('');
-
-    // const cleanInputs = () => {
-    //     setUsername('');
-    //     setPassword('');
-    //     setEmail('');
-    //     setFirstname('');
-    // };
 
     const closeModal = e => {
         if (modalRef.current === e.target) {

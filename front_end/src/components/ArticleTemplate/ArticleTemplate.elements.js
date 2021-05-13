@@ -25,8 +25,6 @@ export const ColumnLeft = styled.div`
     line-height: 1.4;
     padding: 1rem 2rem;
     order: 1;
-    /* order: ${({reverse}) => (reverse ? '2' : '1')}; */
-    /* overflow: auto; */
 
     h1 {
         position: relative;
@@ -52,6 +50,10 @@ export const ColumnRight = styled.div`
         @media screen and (max-width: 1090px) {
             width: 95%;
             height: 95%;
+        }
+
+        @media screen and (max-width: 550px) {
+            display: none;
         }
     }
 `;

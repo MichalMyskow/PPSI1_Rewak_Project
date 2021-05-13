@@ -13,11 +13,10 @@ import {
     NextArrow
 } from './Slider.elements';
 
-const Slider = ({ slides }) => {
+const Slider = () => {
     const [current, setCurrent] = useState(0);
-    const length = slides.length;
-    // const timeout = useRef(null);
     const [posts, setPosts] = useState([]);
+    const length = posts.length;
 
     useEffect(() => {
         const url1 = 'http://blogapi.local/api/posts?page=1';
@@ -36,20 +35,15 @@ const Slider = ({ slides }) => {
     }, []);
 
     const nextSlide = () => {
-        // if (timeout.current) {
-        //     clearTimeout(timeout.current)
-        // }
         setCurrent(current === length - 1 ? 0 : current + 1);
     }
 
     const prevSlide = () => {
-        // if (timeout.current) {
-        //     clearTimeout(timeout.current)
-        // }
+
         setCurrent(current === 0 ? length - 1 : current - 1);
     }
 
-    if (!Array.isArray(slides) || slides.length <= 0) {
+    if (!Array.isArray(posts) || posts.length <= 0) {
         return null;
     }
 

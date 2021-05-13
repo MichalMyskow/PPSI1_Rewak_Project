@@ -17,7 +17,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
 
   const [showModal, setShowModal] = useState(false);
-  const [currentlyLoggedUser, setCurrentlyLoggedUser] = useState('');
 
   const openModal = () => {
     setShowModal(!showModal);
@@ -29,9 +28,8 @@ function App() {
 
       <Navbar openModal={openModal} />
 
-      <Modal showModal={showModal} setShowModal={setShowModal} currentlyLoggedUser={currentlyLoggedUser} setCurrentlyLoggedUser={setCurrentlyLoggedUser}/>
+      <Modal showModal={showModal} setShowModal={setShowModal}/>
 
-      {/* <Slider slides={SliderData} /> */}
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/articles' exact component={Articles} />

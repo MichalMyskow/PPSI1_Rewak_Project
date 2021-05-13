@@ -6,7 +6,6 @@ const Footer = () => {
     return (
         <>
             <FooterContainer>
-                {/* miejsce na pozostałe elementy zawarte powyżej */}
                 <SocialMedia>
                     <SocialWrapper>
                         <ProjectLogoLink to='/'>

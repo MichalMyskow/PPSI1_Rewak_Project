@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.div`
     background-color: red;
-    padding: 4rem 0 2 rem 0;
+    padding: 2rem 0 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +24,10 @@ export const SocialWrapper = styled.div`
     width: 90%;
     max-width: 1000px;
     margin: 40px auto 0 auto;
+
+    @media screen and (max-width: 550px) {
+        justify-content: center;
+    }
 `;
 
 export const ProjectLogoLink = styled(Link)`
@@ -36,6 +40,10 @@ export const ProjectLogoLink = styled(Link)`
     display: flex;
     align-items: center;
     margin-bottom: 16px;
+
+    @media screen and (max-width: 550px) {
+        display: none;
+    }
 `;
 
 export const ProjectLogoIcon = styled(IoBeer)`
@@ -48,13 +56,18 @@ export const SocialIcons = styled.div`
     align-items: center;
     width: 240px;
     cursor: pointer;
+    font-size: 16px;
 `;
 
 export const SocialIconLink = styled.a`
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 
     &:hover {
         border-bottom: 1px solid #fff;
+    }
+
+    @media screen and (max-width: 550px) {
+        font-size: 2.5em;
     }
 `;
