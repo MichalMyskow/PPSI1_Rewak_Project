@@ -61,15 +61,15 @@ const AdminTemplate = () => {
                 <ContentWrapper>
                     <Content active={active === 0}>
 
-                        {posts.map(post => (
-                            <OneRow title={post.title} subtitle={post.subtitle} />
+                        {posts.map((post, index) => (
+                            <OneRow title={post.title} subtitle={post.subtitle} key={index}/>
                         ))}
 
                     </Content>
                     <Content active={active === 1}>
 
-                        {users.map(user => (
-                            <OneRow title={user.id} subtitle={user.username} />
+                        {users.map((user, index) => (
+                            <OneRow title={user.id} subtitle={user.username} key={index}/>
                         ))}
 
                     </Content>

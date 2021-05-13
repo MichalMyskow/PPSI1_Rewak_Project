@@ -17,14 +17,13 @@ const Articles = () => {
             credentials: 'include'
         }).then(resp => resp.json())
             .then(resp => setArticles(resp))
-            .then(resp => console.log(resp))
     }, []);
 
     return (
         <div>
             {
-                articles.map(articles => (
-                    <ArtInfo title={articles.title} content={articles.content} photoLink={articles.photoLink} />
+                articles.map((articles, index ) => (
+                    <ArtInfo title={articles.title} content={articles.content} photoLink={articles.photoLink} key={index}/>
                 ))
             }
         </div>

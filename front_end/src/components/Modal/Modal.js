@@ -15,7 +15,6 @@ const Modal = ({ showModal, setShowModal }) => {
             setShowModal(false);
         }
     };
-
     //sign up - ang. zapisz się
     const handleSingUp = async () => {
 

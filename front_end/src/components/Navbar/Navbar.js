@@ -53,7 +53,7 @@ const Navbar = ({ showModal, setShowModal, openModal }) => {
                         </NavLink>
                     </NavItem>
                     <NavItemBtn>
-                        <NavBtnLink /*to="/button"*/>
+                        <NavBtnLink to="">
                             <Button onClick={openModal}>
                                 Sing In/Up
                             </Button>
