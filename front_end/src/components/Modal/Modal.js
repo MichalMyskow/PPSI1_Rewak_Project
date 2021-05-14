@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { Background, ModalWrappper, CloseModalButton, Login, LoginContainer, BtnContainer } from './Modal.elements';
 import jwt_decode from 'jwt-decode';
 
-const Modal = ({ showModal, setShowModal, showAdminTab, showLogoutTab }) => {
+const Modal = ({ showModal, setShowModal, setShowAdmin, setShowLogout }) => {
     const modalRef = useRef();
     const [hasAccount, setHasAccount] = useState(false);
 
@@ -52,9 +52,9 @@ const Modal = ({ showModal, setShowModal, showAdminTab, showLogoutTab }) => {
             const decoded = jwt_decode(localStorage.getItem("JWT"));
             console.log(decoded);
             if (decoded.username === "admin") {
-                showAdminTab();
+                setShowAdmin(true);
             }
-            showLogoutTab();
+            setShowLogout(true);
         }
     }
 

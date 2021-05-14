@@ -25,33 +25,24 @@ function App() {
     setShowModal(!showModal);
   }
 
-
-  const showAdminTab = () => {
-    setShowAdmin(!showAdmin);
-  }
-
-  const showLogoutTab = () => {
-    setShowLogout(!showLogout);
-  }
-
   const handleLogout = () => {
     localStorage.clear();
-    showAdminTab();
-    showLogoutTab();
+    setShowAdmin(false);
+    setShowLogout(false);
   }
 
   return (
     <Router>
       <GlobalStyles />
 
-      <Navbar openModal={openModal} showAdmin={showAdmin} showLogout={showLogout} setShowLogout={setShowLogout} handleLogout={handleLogout}/>
+      <Navbar openModal={openModal} showAdmin={showAdmin} showLogout={showLogout} setShowAdmin={setShowAdmin} setShowLogout={setShowLogout} handleLogout={handleLogout}/>
 
       <Modal
       showModal={showModal}
       setShowModal={setShowModal}
       setShowAdmin={setShowAdmin}
-      showAdminTab={showAdminTab}
-      showLogoutTab={showLogoutTab}
+      setShowLogout={setShowLogout}
+      setShowAdmin={setShowAdmin}
       />
 
       <Switch>

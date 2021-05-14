@@ -14,12 +14,20 @@ import {
     NavItemBtn,
     NavBtnLink
 } from './Navbar.elements';
+import jwt_decode from 'jwt-decode';
 
 
-
-const Navbar = ({ /*showModal, setShowModal,*/ openModal, showAdmin, showLogout, handleLogout }) => {
+const Navbar = ({ openModal, showAdmin, showLogout, handleLogout, setShowAdmin, setShowLogout }) => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
+
+    if(localStorage.getItem("JWT") !== null){
+        setShowLogout(true);
+        const decoded = jwt_decode(localStorage.getItem("JWT"));
+        if(decoded.username === "admin"){
+            setShowAdmin(true);
+        }
+    }
 
     return (
         <Nav>
