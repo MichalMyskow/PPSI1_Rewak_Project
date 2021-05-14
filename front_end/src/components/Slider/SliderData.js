@@ -5,7 +5,7 @@ export const SliderData = [
         description: 'Fajny portrecik. Fajne zdjęcie. Super gra światła i cieni',
         button_label: 'Check it',
         path: '/article1',
-        image: require('./SliderPhotos/portret.jpg').default,
+        // image: require('./SliderPhotos/portret.jpg').default,
         alt: 'Image1'
     },
     {
@@ -13,7 +13,7 @@ export const SliderData = [
         description: '200 po mieście Dominika jedzie tirem z mlekiem w proszku',
         button_label: 'Check it',
         path: '/article2',
-        image: require('./SliderPhotos/baletnica.jpg').default,
+        // image: require('./SliderPhotos/baletnica.jpg').default,
         alt: 'Image2'
     },
     {
@@ -21,7 +21,7 @@ export const SliderData = [
         description: 'Nocne życie każdej pralki to kargol',
         button_label: 'Check it',
         path: '/article3',
-        image: require('./SliderPhotos/dziewczyny.jpg').default,
+        // image: require('./SliderPhotos/dziewczyny.jpg').default,
         alt: 'Image3'
     }
 ];

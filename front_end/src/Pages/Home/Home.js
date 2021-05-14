@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from '../../components/Slider/Slider';
-import {SliderData} from '../../components/Slider/SliderData';
+import { SliderData } from '../../components/Slider/SliderData';
 
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
 
     return (
         <div>
-            <Slider slides={SliderData}/>
+            <Slider slides={SliderData} />
         </div>
     );
 }

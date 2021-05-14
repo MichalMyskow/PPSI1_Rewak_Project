@@ -17,7 +17,7 @@ import {
 
 
 
-const Navbar = ({ showModal, setShowModal, openModal }) => {
+const Navbar = ({ /*showModal, setShowModal,*/ openModal, showAdmin, showLogout, handleLogout }) => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
 
@@ -47,21 +47,31 @@ const Navbar = ({ showModal, setShowModal, openModal }) => {
                             About Us
                         </NavLink>
                     </NavItem>
-                    <NavItem>
-                    <NavLink to='/admin'>
-                            Admin
-                        </NavLink>
-                    </NavItem>
+                    {showAdmin ? (
+                        <NavItem>
+                            <NavLink to='/admin'>
+                                Admin
+                            </NavLink>
+                        </NavItem>
+                    ) : (
+                            null
+                        )}
+
                     <NavItemBtn>
-                        <NavBtnLink /*to="/button"*/>
-                            <Button onClick={openModal}>
-                                Sing In/Up
-                            </Button>
-                        </NavBtnLink>
+
+                            {showLogout ? (
+                                <NavBtnLink to="/">
+                                <Button onClick={handleLogout}>Logout</Button>
+                                </NavBtnLink>
+                            ) : (
+                                <NavBtnLink to="/">
+                                    <Button onClick={openModal}>Sing In/Up</Button>
+                                </NavBtnLink>
+                                )}
                     </NavItemBtn>
-                </NavMenu>
-            </NavContainer>
-        </Nav>
+                </NavMenu >
+            </NavContainer >
+        </Nav >
     );
 };
 

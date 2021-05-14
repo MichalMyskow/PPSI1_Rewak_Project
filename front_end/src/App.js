@@ -10,6 +10,7 @@ import Article1 from './Pages/Article1/Article1';
 import Article2 from './Pages/Article2/Article2';
 import Article3 from './Pages/Article3/Article3';
 import Article4 from './Pages/Article4/Article4';
+import AboutUs from './Pages/AboutUs/AboutUs';
 import AdminPage from './Pages/AdminPage/AdminPage';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -17,18 +18,41 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
 
   const [showModal, setShowModal] = useState(false);
+  const [showAdmin, setShowAdmin] = useState(false);
+  const [showLogout, setShowLogout] = useState(false);
 
   const openModal = () => {
     setShowModal(!showModal);
+  }
+
+
+  const showAdminTab = () => {
+    setShowAdmin(!showAdmin);
+  }
+
+  const showLogoutTab = () => {
+    setShowLogout(!showLogout);
+  }
+
+  const handleLogout = () => {
+    localStorage.clear();
+    showAdminTab();
+    showLogoutTab();
   }
 
   return (
     <Router>
       <GlobalStyles />
 
-      <Navbar openModal={openModal} />
+      <Navbar openModal={openModal} showAdmin={showAdmin} showLogout={showLogout} setShowLogout={setShowLogout} handleLogout={handleLogout}/>
 
-      <Modal showModal={showModal} setShowModal={setShowModal}/>
+      <Modal
+      showModal={showModal}
+      setShowModal={setShowModal}
+      setShowAdmin={setShowAdmin}
+      showAdminTab={showAdminTab}
+      showLogoutTab={showLogoutTab}
+      />
 
       <Switch>
         <Route path='/' exact component={Home} />
@@ -38,6 +62,8 @@ function App() {
         <Route path='/article2' exact component={Article2} />
         <Route path='/article3' exact component={Article3} />
         <Route path='/article4' exact component={Article4} />
+
+        <Route path='/about-us' exact component={AboutUs} />
 
         <Route path='/admin' exact component={AdminPage} />
       </Switch>

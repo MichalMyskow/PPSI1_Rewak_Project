@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { Background, ModalWrappper, CloseModalButton, Login, LoginContainer, BtnContainer } from './Modal.elements';
+import jwt_decode from 'jwt-decode';
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal, showAdminTab, showLogoutTab }) => {
     const modalRef = useRef();
     const [hasAccount, setHasAccount] = useState(false);
 
@@ -18,11 +19,9 @@ const Modal = ({ showModal, setShowModal }) => {
 
     //sign up - ang. zapisz się
     const handleSingUp = async () => {
-
-
         await fetch('http://blogapi.local/api/users', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 firstName,
                 email,
@@ -36,23 +35,29 @@ const Modal = ({ showModal, setShowModal }) => {
 
     //sign in - ang. zaloguj się
     const handleSingIn = async () => {
-
-            const response = await fetch('http://blogapi.local/api/login_check', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                credentials: 'include',
-                body: JSON.stringify({
-                    username,
-                    password
-                })
-            });
-            const content = await response.json();
-            localStorage.setItem("JWT", content.token);
-            //localStorage.removeItem("name of the item")
-            if(localStorage.getItem("JWT")!=='undefined') {
-                setShowModal(false);
+        const response = await fetch('http://blogapi.local/api/login_check', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify({
+                username,
+                password
+            })
+        });
+        const content = await response.json();
+        localStorage.setItem("JWT", content.token);
+        //localStorage.removeItem("name of the item")
+        if (localStorage.getItem("JWT") !== 'undefined') {
+            setShowModal(false);
+            // const token = localStorage.getItem("JWT");
+            const decoded = jwt_decode(localStorage.getItem("JWT"));
+            console.log(decoded);
+            if (decoded.username === "admin") {
+                showAdminTab();
             }
+            showLogoutTab();
         }
+    }
 
     const keyPress = useCallback(e => {
         if (e.key === 'Escape' && showModal) {
@@ -79,6 +84,7 @@ const Modal = ({ showModal, setShowModal }) => {
                                         <label>Username</label>
                                         <input
                                             type='text'
+                                            autoFocus
                                             required
                                             value={username}
                                             onChange={(e) => setUsername(e.target.value)}

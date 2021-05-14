@@ -1,13 +1,7 @@
 {
   "short_name": "Revac_Project",
   "name": "Create Revac_Project",
-  "icons": [
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
+
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
