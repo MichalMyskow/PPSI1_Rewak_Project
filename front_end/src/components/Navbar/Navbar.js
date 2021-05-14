@@ -58,7 +58,6 @@ const Navbar = ({ /*showModal, setShowModal,*/ openModal, showAdmin, showLogout,
                         )}
 
                     <NavItemBtn>
-
                             {showLogout ? (
                                 <NavBtnLink to="/">
                                 <Button onClick={handleLogout}>Logout</Button>

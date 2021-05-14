@@ -1,7 +1,10 @@
 {
   "short_name": "Revac_Project",
   "name": "Create Revac_Project",
+<<<<<<< HEAD
 
+=======
+>>>>>>> c39fcc1788992137627bbbb8c76c40cb8b4bf8b0
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

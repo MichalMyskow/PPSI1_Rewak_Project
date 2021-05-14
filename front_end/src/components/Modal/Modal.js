@@ -16,7 +16,6 @@ const Modal = ({ showModal, setShowModal, showAdminTab, showLogoutTab }) => {
             setShowModal(false);
         }
     };
-
     //sign up - ang. zapisz się
     const handleSingUp = async () => {
         await fetch('http://blogapi.local/api/users', {
