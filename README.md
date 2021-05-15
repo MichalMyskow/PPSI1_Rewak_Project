@@ -20,17 +20,17 @@ Celem projektu jest stworzenie szkieletu prostej stronki blogowej, której treś
 
 ## Wykorzystane technologie:
 ### FrontEnd
-* React.js (react-icons, react-router-dom, styled-components, jwt-decode)- JavaScript
+* React.js (react-icons, react-router-dom, styled-components, jwt-decode, nelmio/cors)
 * Node.js
 * ES7
-* npm - System zarządzania zależnościami
-* Visual Studio Code - edytor tekstu (+pluginy)
+* npm
+* Visual Studio Code
 ### BackEnd
-* Symfony - Framework PHP
-* Composer - System zarządzania zależnościami
-* Laragon - Środowisko programistyczne umożliwiające pracę z bazą danych oraz serwerem HTTP
+* Symfony (api-platform, doctrine, lexik/jwt-auth, monolog, security, profiler, maker)
+* Composer
+* Laragon
 * PHP w wersji >= 7.4
-* PhpStorm - IDE
+* PhpStorm 
 
 ## Instrukcje uruchamiania systemu
 
