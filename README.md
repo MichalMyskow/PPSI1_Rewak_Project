@@ -18,23 +18,53 @@ Celem projektu jest stworzenie szkieletu prostej stronki blogowej, której treś
 * Możliwość zalogowania się i wylogowania
 * Aplikacja identyfikuje zalogowanego użytkownika
 
-## Wybrane technologie:
+## Wykorzystane technologie:
 ### FrontEnd
-* REACT.js (react-icons, react-router-dom, styled-components, jwt-decode)- JavaScript
+* React.js (react-icons, react-router-dom, styled-components, jwt-decode)- JavaScript
+* Node.js
+* ES7
+* npm - System zarządzania zależnościami
+* Visual Studio Code - edytor tekstu (+pluginy)
 ### BackEnd
-* Symphony - PHP
+* Symfony - Framework PHP
+* Composer - System zarządzania zależnościami
+* Laragon - Środowisko programistyczne umożliwiające pracę z bazą danych oraz serwerem HTTP
+* PHP w wersji >= 7.4
+* PhpStorm - IDE
 
-## Instrukcja 
+## Instrukcje uruchamiania systemu
 
-Do poprawnego działania pobranego projektu wymagane jest posiadanie zainstalowanego na urządzeniu **node.js** i **composer**.
+Do poprawnego działania pobranego projektu wymagane jest posiadanie zainstalowanego na urządzeniu **node.js**, **Composer** i **Laragon**.
 
-1. Po pobraniu projektu na urządzenie należy w folderze _front_end_ wykonać komednę:
+### Instalacja
+1. Po pobraniu projektu na urządzeniu należy w folderze ``front_end`` uruchomić komednę:
 ```
 npm install
 ```
-2. Następnym krokiem jest zainstalowanie aplikacji ***Laragon***, która umożliwi komunikację front_end'u z back_end'em.
-3. Po instalacji ***Laragona*** należy ustawić mu ścieżkę informującą go o lokalizacji folderu projektu.
-4. Po wykonaniu tych kroków należy ponownie wejść do terminala w lokalizacji folderu _front_end_ i wykonać komedę, która "włączy" stronę projektu:
+2. Następnie należy przejść do folderu ``blogApi`` i wykonać następujące komendy.
+
+Pobieranie zależności:
+```
+composer install
+```
+Generowanie kluczy:
+```
+php bin/console lexik:jwt:generate-keypair
+```
+3. Należy ustawić ścieżkę informującą **Laragon** o lokalizacji folderu projektu.
+ 
+4. Po włączeniu Laragona należy utworzyć pusta bazę danych poprzez zakładkę _Database_.
+   - Nazwa użytkownika, nazwa bazy danych oraz hasło są konfigurowalne w pliku ``.env``. 
+
+5. Po stworzeniu bazy danych należy wykonać poniższą komendę w folderze ``blogApi`` w celu stworzenia szkieletu bazy danych.
+```
+php bin/console doctrine:schema:update --force
+```
+
+### Uruchomienie
+1. W celu uruchomienia backendu wystarczy uruchomić program Laragon klikając przycisk ***Start All***.
+
+2. W celu uruchomienia lokalnego serwera frontu należy w folderze ''front_end'' wykonać komendę:
 ```
 npm start
 ```
