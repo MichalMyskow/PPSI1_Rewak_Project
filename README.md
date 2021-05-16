@@ -75,6 +75,7 @@ npm start
 2. **CSS** - realizowany przy pomocy biblioteki React w plikach ``*.elements.js`` (paczka ``styled-components``).
 
 ![image](https://user-images.githubusercontent.com/72625642/118408780-4e928f00-b687-11eb-8541-989b33cd7d81.png)
+
 3. **Formularze** - przekazanie informacji do aplikacji zostało zrealizowane poprzez zamieszczenie w aplikacji możliwości stworzenia nowego użytkownika wraz z zamieszczeniem go na liście użytkowników w bazie danych.
 
 ![image](https://user-images.githubusercontent.com/72625642/118408618-ada3d400-b686-11eb-91de-2900de7eaf7e.png)
