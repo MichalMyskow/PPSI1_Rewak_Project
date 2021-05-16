@@ -85,6 +85,8 @@ npm start
 
 6. **Uwierzytelnianie** - w celu uwierzytenienia skorzystaliśmy ze standardu JWT(JSON Web Token) opartym o tokeny. Po akcji logowania po stronie serwera sprawdzane są dane użytkownika i jeśli są poprawne tworzony jest token. Token zostaje zwrócony do klienta i umożliwia akcje wymagające posiadania tokenu. W wykonanym przez nas projekcie skorzystaliśmy z pakietu "LexikJWTAuthenticationBundle". Pozwala on na konfigurację danych wymaganych do uwierzytelnienia, czasu wygaśnięcia tokenów oraz ustawienia ścieżek kontroli dostępu. Drugim zabezpieczeniem naszej aplikacji są role przyznawane przy rejestracji użytkownika lub przydzielane przez administratora. Umożliwiają one dostęp do konkretych działań na danych obiektach oraz blokują dostęp do wybranych danych użytkownikom bez roli administratora [ROLE_AUTHOR]. Każdy zarejestrowany użytkownik otrzymuje role '[ROLE_USER]'.
 
+![image](https://user-images.githubusercontent.com/72620908/118410774-78e94a00-b691-11eb-8ffe-1261d878896b.png)
+
 7. **MVC** - Symfony opiera się na klasycznym wzorcu projektowania znanym jako MVC, który składa się z trzech poziomów: 
    - Modelu który reprezentuje informacje, na których działa aplikacja.
    - Widoku który renderuje model na stronę internetową odpowiednią do interakcji z użytkownikiem.
@@ -94,9 +96,15 @@ W wykonanym przez nas projekcie za kontroler uznajemy wewnętrzne mechanizmy zaw
 
 8. **CRUD** - Do udostępnienia operacji dodawania, edycji i usuwania rekordów z bazy danych skorzystalismy z biblioteki API Platform Core zintegrowanym z frameworkiem Symfony. API Platform Core opiera się na koncepcji operacji. Operacje można zastosować do uwidocznienia zasobów poprzez interfejs API. API Platform automatycznie rejestruje typowe operacje CRUD i opisuje je w udostępnionej dokumentacji(Hydra i Swagger). Operacje podzielone są na dwie grupy: kolekcji oraz pojedynczego zasobu i można je konfigurować w encji danego zasobu.
 
+![image](https://user-images.githubusercontent.com/72620908/118410881-075dcb80-b692-11eb-81fb-93b042416f45.png)
+
 9. **ORM** - system mapowania relacyjno-obiektowego dostarczył nam zestaw bibliotek PHP do pracy z bazami danych o nazwie Doctrine. Jest to model typu "Data mapper" w którym encje są po prostu zwykłymi obiektami PHP zawierającymi adnotacje będące prostymi znacznikami dostarczającymi Doctrine danych o klasie.
 
+![image](https://user-images.githubusercontent.com/72620908/118411010-c3b79180-b692-11eb-9731-7695f40f9229.png)
+
 10. **Wystawienie API** - do wystawienia i opisu udokumentowanych adresów URL użytych w API wykorzystalismy zestaw narzędzi o nazwie Swagger(OpenAPI), który jest częścią biblioteki API Platform Core. Swagger to ekosystem narzędzi służący do tworzenia interfejsów API ze specyfikacją OpenAPI oraz wizualizację zasobów aplikacji.
+
+![image](https://user-images.githubusercontent.com/72620908/118410835-cb2a6b00-b691-11eb-9b72-524f31cd6367.png)
 
 11. **Konsumowanie API** - konsumowanie API jest realizowane przy pomocy komendy fetch biblioteki React. W naszym projekcie wykorzystujemy ja przy, miedzy innymi, wylkistowaniu zawartoścci artykułów i, w przypadku konta admina, do wyświetlenia wszystkich obecnych w bazie danych użytkowników.
 
