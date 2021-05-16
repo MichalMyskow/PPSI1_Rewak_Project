@@ -73,8 +73,10 @@ npm start
 
 1. **HTML** - realizowany przy użyciu biblioteki React. Większość projektu jest zakodowana z wykorzystniem ``styled-components``.
 2. **CSS** - realizowany przy pomocy biblioteki React w plikach ``*.elements.js`` (paczka ``styled-components``).
+
 ![image](https://user-images.githubusercontent.com/72625642/118408780-4e928f00-b687-11eb-8541-989b33cd7d81.png)
 3. **Formularze** - przekazanie informacji do aplikacji zostało zrealizowane poprzez zamieszczenie w aplikacji możliwości stworzenia nowego użytkownika wraz z zamieszczeniem go na liście użytkowników w bazie danych.
+
 ![image](https://user-images.githubusercontent.com/72625642/118408618-ada3d400-b686-11eb-91de-2900de7eaf7e.png)
 
 4. **Baza danych** - Symfony zapewnia wszystkie narzędzia do korzystania z baz danych dzięki zestawowi bibliotek Doctrine. Aplikacja umożliwia połączenie z zewnętrzną bazą danych MySQL, dzięki programowi Laragon, konfiguracji pliku .env oraz instalacji pakietu Doctrine. 
@@ -134,3 +136,6 @@ W wykonanym przez nas projekcie za kontroler uznajemy wewnętrzne mechanizmy zaw
 
 ![image](https://user-images.githubusercontent.com/72625642/118409420-9961d600-b68a-11eb-9e86-8cc5e0959421.png)
  
+##Wnioski projektowe
+
+W trakcie wykonywania projektu członkowie naszej grupy doszli do wniosków dotyczących ich dalszej kariery w obszarze studiowanego przedmiotu. Wnioski obejmują dalsze plany nauki w kierunkach: testowania oprogramowania, pisania testów, dalszego rozwoju w Symfony, poznawania frameworków frontendowych (Next.js) oraz backendowych (Laravel), frameworków pracy (Scrum), metodologii prowadzenia projektu (Jira) oraz zaawansowanej pracy w zespole (GitHub).   
