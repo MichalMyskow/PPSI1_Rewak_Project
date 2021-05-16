@@ -24,13 +24,14 @@ export const RowWrapper = styled.li`
 // export const Subtitle = styled.p``;
 
 
-const OneRow = ({ title, subtitle }) => {
+const OneRow = ({ firstValue, secondValue, thirdValue }) => {
     return (
         <>
             <Row>
                 <RowWrapper>
-                    <p>{title}</p>
-                    <p>{subtitle}</p>
+                    <p>{firstValue}</p>
+                    <p>{secondValue}</p>
+                    <p>{thirdValue}</p>
                 </RowWrapper>
             </Row>
         </>

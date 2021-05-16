@@ -5,7 +5,7 @@ import { AdminContainer, TabsWrapper, ContentWrapper, Tabs, TabButton, Content }
 
 const AdminTemplate = () => {
 
-    const [active, setActive] = useState(0);
+    const [active, setActive] = useState(0)
     const [posts, setPosts] = useState([]);
     const [users, setUsers] = useState([]);
 
@@ -62,14 +62,14 @@ const AdminTemplate = () => {
                     <Content active={active === 0}>
 
                         {posts.map((post, index) => (
-                            <OneRow title={post.title} subtitle={post.subtitle} key={index}/>
+                            <OneRow firstValue={post.id} secondValue={post.title} thirdValue={post.subtitle} key={index}/>
                         ))}
 
                     </Content>
                     <Content active={active === 1}>
 
                         {users.map((user, index) => (
-                            <OneRow title={user.id} subtitle={user.username} key={index}/>
+                            <OneRow firstValue={user.id} secondValue={user.username} thirdValue={user.email} key={index}/>
                         ))}
 
                     </Content>
