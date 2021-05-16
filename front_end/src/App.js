@@ -40,7 +40,6 @@ function App() {
       <Modal
       showModal={showModal}
       setShowModal={setShowModal}
-      setShowAdmin={setShowAdmin}
       setShowLogout={setShowLogout}
       setShowAdmin={setShowAdmin}
       />
