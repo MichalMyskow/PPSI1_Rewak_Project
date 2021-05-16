@@ -136,6 +136,6 @@ W wykonanym przez nas projekcie za kontroler uznajemy wewnętrzne mechanizmy zaw
 
 ![image](https://user-images.githubusercontent.com/72625642/118409420-9961d600-b68a-11eb-9e86-8cc5e0959421.png)
  
-##Wnioski projektowe
+## Wnioski projektowe
 
 W trakcie wykonywania projektu członkowie naszej grupy doszli do wniosków dotyczących ich dalszej kariery w obszarze studiowanego przedmiotu. Wnioski obejmują dalsze plany nauki w kierunkach: testowania oprogramowania, pisania testów, dalszego rozwoju w Symfony, poznawania frameworków frontendowych (Next.js) oraz backendowych (Laravel), frameworków pracy (Scrum), metodologii prowadzenia projektu (Jira) oraz zaawansowanej pracy w zespole (GitHub).   
