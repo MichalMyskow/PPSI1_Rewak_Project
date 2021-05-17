@@ -25,14 +25,12 @@ const Slider = () => {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
-				// 'Authorization': 'BEARER '+ localStorage.getItem('JWT'),
 				Accept: 'application/json'
 			},
 			credentials: 'include'
 		})
 			.then(resp => resp.json())
 			.then(resp => setPosts(resp));
-		// .then(resp => console.log(resp))
 	}, []);
 
 	const nextSlide = () => {
@@ -47,35 +45,6 @@ const Slider = () => {
 		return null;
 	}
 
-	// return (
-	//     <SliderSection>
-	//         <SliderWrapper>
-	//             {slides.map((slide, index) => {
-	//                 return (
-	//                     <SliderSlide key={index}>
-	//                         {index === current && (
-	//                             <SliderSlider>
-	//                                 <SliderImg src={slide.image} alt={slide.alt} />
-	//                                 <SliderContent>
-	//                                     <h1> {slide.title} </h1>
-	//                                     <p> {slide.description} </p>
-	//                                     <SliderBtnLink to={slide.path} css={`max-width: 160px;`}>
-	//                                         {slide.button_label}
-	//                                         <Arrow />
-	//                                     </SliderBtnLink>
-	//                                 </SliderContent>
-	//                             </SliderSlider>
-	//                         )}
-	//                     </SliderSlide>
-	//                 );
-	//             })}
-	//             <SliderButtons>
-	//                 <PrevArrow onClick={prevSlide} />
-	//                 <NextArrow onClick={nextSlide} />
-	//             </SliderButtons>
-	//         </SliderWrapper>
-	//     </SliderSection>
-	// );
 
 	return (
 		<SliderSection>

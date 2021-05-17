@@ -10,7 +10,6 @@ const Article1 = () => {
         const url1 = 'http://blogapi.local/api/posts/1';
         fetch(url1).then(resp => resp.json())
             .then(resp => setPost(resp))
-            // .then(resp => console.log(resp))
     }, []);
 
     const title = `${post.title}`

@@ -11,7 +11,6 @@ const Articles = () => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                //'Authorization': 'BEARER '+ localStorage.getItem('JWT'),
                 'Accept': 'application/json'
             },
             credentials: 'include'

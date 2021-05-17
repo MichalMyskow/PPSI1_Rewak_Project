@@ -45,12 +45,9 @@ const Modal = ({ showModal, setShowModal, setShowAdmin, setShowLogout }) => {
         });
         const content = await response.json();
         localStorage.setItem("JWT", content.token);
-        //localStorage.removeItem("name of the item")
         if (localStorage.getItem("JWT") !== 'undefined') {
             setShowModal(false);
-            // const token = localStorage.getItem("JWT");
             const decoded = jwt_decode(localStorage.getItem("JWT"));
-            console.log(decoded);
             if (decoded.username === "admin") {
                 setShowAdmin(true);
             }
